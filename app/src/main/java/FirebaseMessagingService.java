@@ -25,7 +25,7 @@ public class FirebaseMessagingService extends com.google.firebase.messaging.Fire
                 .setAutoCancel(true)
                 .setContentTitle("New notice uploaded")
                 .setContentText(message)
-                .setSmallIcon(R.mipmap.images)
+                .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentIntent(pendingIntent);
         NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
 
