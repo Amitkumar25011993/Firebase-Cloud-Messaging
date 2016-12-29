@@ -1,7 +1,7 @@
 <?php 
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
-echo "Notication send";
+echo "Notication sent";
 }
 else
 {
@@ -16,7 +16,7 @@ echo "Not sent";
 			 'data' => $message
 			);
 		$headers = array(
-			'Authorization:key = AIzaSyCPYLyQTzY-d2EZE8UFQrcqNYOR6yRoEBE',
+			'Authorization:key =unique_key',
 			'Content-Type: application/json'
 			);
 	   $ch = curl_init();
@@ -35,7 +35,7 @@ echo "Not sent";
        return $result;
 	}
 	
-	$conn = mysqli_connect("mysql.hostinger.in","u480843022_fcm","miniproject@1235","u480843022_fcm");
+	$conn = mysqli_connect("mysql.hostinger.in","user","password","database");
 	$sql = " Select Token From users";
 	$result = mysqli_query($conn,$sql);
 	$tokens = array();
