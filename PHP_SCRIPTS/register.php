@@ -2,7 +2,7 @@
 	if (isset($_POST["Token"])){
 		
 		   $_uv_Token=$_POST["Token"];
-		   $conn = mysqli_connect("mysql.hostinger.in","u480843022_fcm","miniproject@1235","u480843022_fcm");
+		   $conn = mysqli_connect("mysql.hostinger.in","user","password","database");
 		   $query="insert into users values('$_uv_Token')
                    ON DUPLICATE KEY UPDATE Token = '$_uv_Token';";
               
